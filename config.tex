@@ -1,0 +1,39 @@
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tocloft}
+\usepackage{setspace}
+\setstretch{1.5}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\usepackage{booktabs}
+\usepackage{parallel}
+
+%\usepackage{blindtext}
+%\usepackage{microtype}
+
+\usepackage{polyglossia}
+%\setmainlanguage[variant=bokmal]{norwegian}
+\setmainlanguage{english}
+
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily{\greekfont}[Script=Greek,Path=\fontPath]{SBL_grk}
+
+%\setotherlanguage{hebrew}
+%\newfontfamily{\hebrewfont}[Script=Hebrew,Path=\fontPath]{SBL_Hbrw}
+
+\usepackage[backend=biber, notes, isbn=false]{biblatex-chicago}
+\usepackage{csquotes}
+\addbibresource{~/.config/pandoc/bib/bibliography.bib}
+
+\newcommand{\greekcol}[2]{
+	\ParallelLText{\noindent\small{\textit{#1:}} \textgreek{#2}}
+}
+\newcommand{\norcol}[2]{
+	\ParallelRText{\noindent\small{\textit{#1:}} #2}
+}
+
+% sec depth to get numbered paragraph and subparagraph
+\setcounter{secnumdepth}{6}
+% include paragraph and subparagraph in toc
+\setcounter{tocdepth}{6}

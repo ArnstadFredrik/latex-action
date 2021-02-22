@@ -1,0 +1,42 @@
+%!TeX program=xelatex
+\documentclass[a4paper, 12pt]{article}
+
+\include{variables}
+\include{config}
+
+\begin{document}
+
+% ----------------------------------------------
+% 	Title page and decleration
+% ----------------------------------------------
+\begin{titlepage}
+\input{frontBackmatter/essay_info}
+\input{frontBackmatter/decleration}
+\end{titlepage}
+
+% ----------------------------------------------
+% 	TOC
+% ----------------------------------------------
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+\pagenumbering{arabic}
+
+% ----------------------------------------------
+% 	Main document
+% ----------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+\input{chapters/introduction}
+
+\section{Main}
+\label{sec:main}
+\input{chapters/main}
+
+\section{Conclution}
+\label{sec:concl}
+\input{chapters/conclusion}
+
+\include{frontBackmatter/bibliography}
+\end{document}

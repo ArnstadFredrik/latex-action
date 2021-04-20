@@ -8,6 +8,7 @@
 
 \usepackage{booktabs}
 \usepackage{parallel}
+\usepackage{titlesec}
 
 %\usepackage{blindtext}
 %\usepackage{microtype}
@@ -26,14 +27,41 @@
 \usepackage{csquotes}
 \addbibresource{~/.config/pandoc/bib/bibliography.bib}
 
-\newcommand{\greekcol}[2]{
-	\ParallelLText{\noindent\small{\textit{#1:}} \textgreek{#2}}
-}
-\newcommand{\norcol}[2]{
-	\ParallelRText{\noindent\small{\textit{#1:}} #2}
-}
-
 % sec depth to get numbered paragraph and subparagraph
 \setcounter{secnumdepth}{6}
 % include paragraph and subparagraph in toc
 \setcounter{tocdepth}{6}
+
+\titleformat{\chapter}
+{\Huge\bfseries}
+{\thechapter}
+{1em}
+{}
+
+% sets paragraph section as regular block heading
+\titleformat{\paragraph}
+{\bfseries}
+{\theparagraph}
+{1em}
+{}
+
+% removes indentation after paragraph section
+\titlespacing*{\paragraph}
+{0pt}
+{*4}
+{*1.5}
+{}
+
+% sets paragraph section as regular block heading
+\titleformat{\subparagraph}
+{\bfseries}
+{\thesubparagraph}
+{1em}
+{}
+
+% removes indentation after paragraph section
+\titlespacing*{\subparagraph}
+{0pt}
+{*4}
+{*1.5}
+{}

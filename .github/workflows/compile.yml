@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
           
       - name: Compile LaTeX document
         uses: dante-ev/latex-action@master
@@ -29,4 +29,6 @@ jobs:
             #    args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v4.13.1
-
+        with:
+          commit_message: CI: Compiled pdf
+          branch: master

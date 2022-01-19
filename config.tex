@@ -19,14 +19,13 @@
 \setmainlanguage{english}
 
 \setotherlanguage[variant=ancient]{greek}
-\newfontfamily{\greekfont}[Script=Greek,Path=\fontPath]{SBL_grk}
+\newfontfamily{\greekfont}[Script=Greek,Path=./fonts/]{SBL_grk}
 
 %\setotherlanguage{hebrew}
 %\newfontfamily{\hebrewfont}[Script=Hebrew,Path=\fontPath]{SBL_Hbrw}
 
 \usepackage[backend=biber, notes, isbn=false]{biblatex-chicago}
 \usepackage{csquotes}
-\addbibresource{~/.config/pandoc/bib/bibliography.bib}
 \addbibresource{./bibliography.bib}
 
 % sec depth to get numbered paragraph and subparagraph

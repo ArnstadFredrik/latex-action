@@ -13,14 +13,14 @@ jobs:
           root_file: paper.tex
           args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
 
-      - name: Biber
-        uses: dante-ev/latex-action@master
-        with:
-          root_file: paper.tex
-          args: biber
+            #- name: Biber
+            #  uses: dante-ev/latex-action@master
+            #  with:
+            #    root_file: paper.tex
+            #    args: biber
 
-      - name: Compile LaTeX document
-        uses: dante-ev/latex-action@master
-        with:
-          root_file: paper.tex
-          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+            #- name: Compile LaTeX document
+            #  uses: dante-ev/latex-action@master
+            #  with:
+            #    root_file: paper.tex
+            #    args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode

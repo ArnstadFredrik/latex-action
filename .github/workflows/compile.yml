@@ -24,3 +24,6 @@ jobs:
             #  with:
             #    root_file: paper.tex
             #    args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+      - name: Git Auto Commit
+        uses: stefanzweifel/git-auto-commit-action@v4.13.1
+
